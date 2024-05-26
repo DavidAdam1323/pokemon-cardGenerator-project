@@ -48,3 +48,9 @@ body {
   text-align: center;
   font-weight: 600;
 }
+
+.types {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 40px 0;
+}
