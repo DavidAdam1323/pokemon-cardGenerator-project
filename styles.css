@@ -11,9 +11,14 @@ body {
 
 .container {
   width: 350px;
-  border: 1px solid black;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+}
+
+#card {
+  width: 100%;
+  padding: 30px 20px;
+  border: 1px solid black;
 }
