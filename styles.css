@@ -43,3 +43,8 @@ body {
   margin-left: auto;
   font-weight: 400;
 }
+
+.poke-name {
+  text-align: center;
+  font-weight: 600;
+}
