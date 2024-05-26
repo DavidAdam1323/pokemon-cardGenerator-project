@@ -18,7 +18,7 @@ body {
 }
 
 #card {
+  background: radial-gradient(circle at 50% 0%, orange 36%, #ffffff 36%);
   width: 100%;
   padding: 30px 20px;
-  border: 1px solid black;
 }
