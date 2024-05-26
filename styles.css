@@ -21,4 +21,5 @@ body {
   background: radial-gradient(circle at 50% 0%, orange 36%, #ffffff 36%);
   width: 100%;
   padding: 30px 20px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
 }
