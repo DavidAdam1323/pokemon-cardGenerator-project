@@ -33,3 +33,13 @@ body {
   position: relative;
   margin: 20px auto;
 }
+
+.hp {
+  width: 80px;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 30px;
+  margin-left: auto;
+  font-weight: 400;
+}
