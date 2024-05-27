@@ -22,5 +22,13 @@ let getPokeData = () => {
     });
 };
 
+// Generate Card;
+let generateCard = (data) => {
+  // Get the necessary data and asign it to variables;
+  console.log(data);
+  const hp = data.stats[0].base_stat;
+  const imgSrc = data.sprites.other.dream_world.front_default;
+};
+
 btn.addEventListener("click", getPokeData);
 window.addEventListener("load", getPokeData);
