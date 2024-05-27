@@ -17,9 +17,10 @@ let getPokeData = () => {
   fetch(finalUrl)
     .then((response) => response.json())
     .then((data) => {
-      // generateCard(data);
-      console.log(data);
+      generateCard(data);
+      // console.log(data);
     });
 };
 
 btn.addEventListener("click", getPokeData);
+window.addEventListener("load", getPokeData);
