@@ -12,6 +12,14 @@ let getPokeData = () => {
   // Combine the PokeAPI url with Pokemon id;
   const finalUrl = url + id;
   console.log(finalUrl);
+
+  // Fetch generated URL;
+  fetch(finalUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      // generateCard(data);
+      console.log(data);
+    });
 };
 
 btn.addEventListener("click", getPokeData);
