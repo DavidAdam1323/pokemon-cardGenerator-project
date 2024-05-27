@@ -31,6 +31,7 @@ let generateCard = (data) => {
   const pokeName = data.name;
   const statAttack = data.stats[1].base_stat;
   const statDefense = data.stats[2].base_stat;
+  const statSpeed = data.stats[5].base_stat;
 };
 
 btn.addEventListener("click", getPokeData);
