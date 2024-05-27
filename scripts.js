@@ -81,6 +81,7 @@ let generateCard = (data) => {
   </div>
   `;
   appendTypes(data.types);
+  styleCard(themeColor);
 };
 
 let appendTypes = (types) => {
