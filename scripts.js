@@ -1,5 +1,6 @@
-// Pokemon Card Generator; Fetch Data...
+// Pokemon Card Generator;
 
+// Define a mapping of Pokemon types to color codes in the typeColor object; ✅
 const typeColor = {
   bug: "#26de81",
   dragon: "#ffeaa7",
@@ -19,10 +20,20 @@ const typeColor = {
   water: "#0190FF",
 };
 
+// Set the base URL for fetching Pokemon data from the PokeAPI; ✅
 const url = " https://pokeapi.co/api/v2/pokemon/";
+
+// Retrieve references to the card and button elements in the HTML; ✅
 const card = document.getElementById("card");
 const btn = document.getElementById("btn");
 
+/* 
+Implement a function getPokeData to:
+    1. Generate a random Pokemon ID between 1 and 150. ✅
+    2. Construct the final URL by combining the base URL with the generated ID. ✅
+    3. Fetch data from the generated URL using the Fetch API. ✅
+    4. Call the generateCard function with the fetched data. ✅
+*/
 let getPokeData = () => {
   // Generate a random number between 1 and 150;
   let id = Math.floor(Math.random() * 150) + 1;
@@ -41,7 +52,14 @@ let getPokeData = () => {
     });
 };
 
-// Generate Card;
+/*
+Define the generateCard function to:
+    1. Extract necessary data from the fetched Pokemon data. ✅
+    2. Capitalize the first letter of the Pokemon name. ✅
+    3. Determine the theme color based on the primary Pokemon type. ✅
+    4. Populate the card element with the extracted data and styling. ✅
+    5. Append the Pokemon types to the card and style them accordingly. ✅
+*/
 let generateCard = (data) => {
   // Get the necessary data and asign it to variables;
   console.log(data);
@@ -84,6 +102,7 @@ let generateCard = (data) => {
   styleCard(themeColor);
 };
 
+// Create the appendTypes function to iterate over the Pokemon types and add them as spans within the card. ✅
 let appendTypes = (types) => {
   types.forEach((item) => {
     let span = document.createElement("SPAN");
@@ -92,6 +111,7 @@ let appendTypes = (types) => {
   });
 };
 
+// Implement the styleCard function to set the background color of the card with a radial gradient and style the Pokemon type spans with the theme color. ✅
 let styleCard = (color) => {
   card.style.background = `radial-gradient(circle at 50% 0%, ${color} 36%, #ffffff 36%)`;
   card.querySelectorAll(".types span").forEach((typeColor) => {
@@ -99,5 +119,6 @@ let styleCard = (color) => {
   });
 };
 
+// Add event listeners to the button for fetching Pokemon data on click and to the window for loading Pokemon data on page load. ✅
 btn.addEventListener("click", getPokeData);
 window.addEventListener("load", getPokeData);
