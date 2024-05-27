@@ -52,6 +52,9 @@ let generateCard = (data) => {
   const statDefense = data.stats[2].base_stat;
   const statSpeed = data.stats[5].base_stat;
 
+  // Set themeColor based on pokemon type;
+  const themeColor = typeColor[data.types[0].type.name];
+
   card.innerHTML = `
   <p class="hp">
     <span>HP</span>
