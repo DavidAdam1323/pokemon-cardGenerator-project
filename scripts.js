@@ -37,11 +37,11 @@ Implement a function getPokeData to:
 let getPokeData = () => {
   // Generate a random number between 1 and 150;
   let id = Math.floor(Math.random() * 150) + 1;
-  console.log(id);
+  // console.log(id);
 
   // Combine the PokeAPI url with Pokemon id;
   const finalUrl = url + id;
-  console.log(finalUrl);
+  // console.log(finalUrl);
 
   // Fetch generated URL;
   fetch(finalUrl)
@@ -62,7 +62,7 @@ Define the generateCard function to:
 */
 let generateCard = (data) => {
   // Get the necessary data and asign it to variables;
-  console.log(data);
+  // console.log(data);
   const hp = data.stats[0].base_stat;
   const imgSrc = data.sprites.other.dream_world.front_default;
   const pokeName = data.name[0].toUpperCase() + data.name.slice(1);
